@@ -1,14 +1,16 @@
 import { Helmet } from "react-helmet";
 
-const Home = () => {
+
+const MyCart = () => {
     return (
         <div>
             <Helmet>
-                <title>Gadget World :: Home</title>
+                <title>Gadget World :: MyCart</title>
             </Helmet>
-            Home
+
+            <h1>My Cart</h1>
         </div>
     );
 };
 
-export default Home;
+export default MyCart;
