@@ -5,7 +5,8 @@ import { FcGoogle } from 'react-icons/fc'
 import { UserContext } from "../../Provider/AuthProviders";
 import Swal from "sweetalert2";
 import { Typewriter } from 'react-simple-typewriter'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Login = () => {
 
@@ -79,11 +80,15 @@ const Login = () => {
 
     }
 
+    // AOS setting
+    AOS.init({
+        duration: 3000,
+    })
     return (
 
         <div className='py-4 bg-[#00AEEF]'>
             <div className='flex justify-center items-center' >
-                <div className='flex flex-col rounded-md sm:p-10 shadow-2xl bg-base-100 text-gray-900 ' data-aos="fade-down">
+                <div className='flex flex-col rounded-md sm:p-10 shadow-2xl bg-base-100 text-gray-900 px-4' data-aos="fade-left">
                     <h1 className='my-4 text-4xl font-bold text-[#00AEEF]' style={{ textShadow: '3px 3px 5px rgba(0, 0, 0, 0.4)' }}>
                         <Typewriter
                             cursor={false}
