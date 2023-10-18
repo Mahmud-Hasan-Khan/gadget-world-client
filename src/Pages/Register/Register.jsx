@@ -93,8 +93,9 @@ const Register = () => {
 
     return (
         <div style={{
-            backgroundImage: `url(https://i.ibb.co/jb9JDF8/Registration-Bg.jpg)`,
-            backgroundSize: 'cover',
+            backgroundImage: `url(https://i.ibb.co/pJwm3Q7/gadgetBg.png)`,
+            // backgroundSize: 'cover',
+            backgroundRepeat: 'repeat',
             backgroundPosition: 'center',
             display: 'flex',
             alignItems: 'center',
@@ -154,7 +155,7 @@ const Register = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6 max-w-[558px]">
-                            <button className="bg-orange-600 font-medium text-white py-3 rounded-lg hover:bg-orange-700">
+                            <button className="bg-[#ad5cb4] font-medium text-white py-3 rounded-lg hover:bg-[#ac49b5] hover:shadow-lg">
                                 {loading ? (
                                     <ImSpinner3 className='m-auto animate-spin' size={24} />
                                 ) : (

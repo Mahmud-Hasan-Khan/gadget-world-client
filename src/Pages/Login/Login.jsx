@@ -15,7 +15,6 @@ const Login = () => {
     const [loginError, setLoginError] = useState(null)
     const navigate = useNavigate();
     const location = useLocation();
-    // const from = location.state?.from?.pathname || '/'
 
     useEffect(() => {
         if (loginError) {
@@ -71,8 +70,6 @@ const Login = () => {
                     timer: 1500
                 })
                 navigate(location?.state ? location.state : "/")
-
-                // navigate("/")
             })
             .catch((error) => {
                 const errorMessage = error.message;
