@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { Typewriter } from 'react-simple-typewriter'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
 
@@ -87,6 +88,10 @@ const Login = () => {
     return (
 
         <div className='py-4 bg-[#00AEEF]'>
+            <Helmet>
+                <title>Gadget World :: Login</title>
+            </Helmet>
+
             <div className='flex justify-center items-center' >
                 <div className='flex flex-col rounded-md sm:p-10 shadow-2xl bg-base-100 text-gray-900 px-4' data-aos="fade-left">
                     <h1 className='my-4 text-4xl font-bold text-[#00AEEF]' style={{ textShadow: '3px 3px 5px rgba(0, 0, 0, 0.4)' }}>

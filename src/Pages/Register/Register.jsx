@@ -6,6 +6,7 @@ import { updateProfile } from "firebase/auth";
 
 import { ImSpinner3 } from "react-icons/im";
 import auth from "../../firebase/firebase.config";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
 
@@ -92,6 +93,7 @@ const Register = () => {
     }
 
     return (
+
         <div style={{
             backgroundImage: `url(https://i.ibb.co/pJwm3Q7/gadgetBg.png)`,
             // backgroundSize: 'cover',
@@ -102,7 +104,12 @@ const Register = () => {
             justifyContent: 'center',
             height: '100%',
         }}
+
         >
+            <Helmet>
+                <title>Gadget World :: Register</title>
+            </Helmet>
+
             <div className="hero my-2" data-aos="fade-up">
                 <div className="px-24 py-4 max-w-[752px] shadow-2xl bg-transparent backdrop-blur-sm rounded-lg">
                     <h1 className="text-4xl font-semibold text-center text-white">Register your account</h1>
