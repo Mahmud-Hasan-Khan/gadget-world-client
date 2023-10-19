@@ -8,6 +8,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Product from "../Pages/Product/Product";
+import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 // import GoogleProduct from "../Pages/GoogleProduct/GoogleProduct";
 
 const myCreatedRouter = createBrowserRouter([
@@ -33,14 +34,13 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: '/products/:brand',
-                element: <Product></Product>,
-                loader: () => fetch('http://localhost:3000/googleProducts')
+                element: <Product></Product>
             },
-            // {
-            //     path: '/googleProduct',
-            //     element: <GoogleProduct></GoogleProduct>,
-            //     loader: () => fetch('http://localhost:3000/googleProducts')
-            // },
+            {
+                path: '/productDetails/:id',
+                element: <ProductDetails></ProductDetails>,
+                loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`)
+            },
             {
                 path: '/login',
                 element: <Login></Login>

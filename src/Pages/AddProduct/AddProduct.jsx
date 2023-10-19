@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 
-
 const AddProduct = () => {
 
     const handleAddProduct = (e) => {
