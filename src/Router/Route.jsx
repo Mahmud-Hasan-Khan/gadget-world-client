@@ -7,6 +7,8 @@ import MyCart from "../Pages/MyCart/MyCart";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Product from "../Pages/Product/Product";
+// import GoogleProduct from "../Pages/GoogleProduct/GoogleProduct";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -16,7 +18,8 @@ const myCreatedRouter = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:3000/brands')
             },
             {
                 path: '/addProduct',
@@ -28,6 +31,16 @@ const myCreatedRouter = createBrowserRouter([
                 path: '/myCart',
                 element: <MyCart></MyCart>
             },
+            {
+                path: '/products/:brand',
+                element: <Product></Product>,
+                loader: () => fetch('http://localhost:3000/googleProducts')
+            },
+            // {
+            //     path: '/googleProduct',
+            //     element: <GoogleProduct></GoogleProduct>,
+            //     loader: () => fetch('http://localhost:3000/googleProducts')
+            // },
             {
                 path: '/login',
                 element: <Login></Login>

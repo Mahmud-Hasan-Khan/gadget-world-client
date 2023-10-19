@@ -1,0 +1,44 @@
+{
+    "gadgets": [
+        {
+            "name": "Google Pixel 6",
+            "brand": "Google",
+            "type": "Phone",
+            "price": "799",
+            "short_description": "The latest flagship phone from Google with amazing camera capabilities and powerful performance.",
+            "rating": 4.5,
+            "image": "https://i.ibb.co/h2fJ3bT/pixel-6-pro-8.webp"
+        },
+        {
+            "name": "Google Pixelbook Pro",
+            "brand": "Google",
+            "type": "Computer",
+            "price": "1,199",
+            "short_description": "A high-performance Chromebook designed for professionals and power users.",
+            "rating": 4.2,
+            "image": "https://i.ibb.co/cxMPC5J/google-pixelbook-pro-4.webp"
+        },
+        {
+            "name": "Google Nest Hub Max",
+            "brand": "Google",
+            "type": "Smart Display",
+            "price": "229",
+            "short_description": "A smart display with a built-in camera for video calls, and it serves as a central hub for your smart home.",
+            "rating": 4.3,
+            "image": "https://i.ibb.co/2tptFWq/google-nest-hub-max-004.jpg"
+        },
+        {
+            "name": "Google Pixel Buds",
+            "brand": "Google",
+            "type": "Headphones",
+            "price": "149",
+            "short_description": "Wireless earbuds with Google Assistant integration and high-quality sound for music and calls.",
+            "rating": 4.0,
+            "image": "https://i.ibb.co/CnVsvLv/Google-Pixel-Buds-A-Series-920x613.webp"
+        }
+    ]
+}
+
+
+
+https: //i.ibb.co/JBKwJ2T/Google-devices.jpg
