@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../ProductCard/ProductCard";
+import ImageSlider from "../../components/ImageSlider";
 
 const Product = () => {
     const [loadedProducts, setLoadedProducts] = useState([]);
@@ -24,7 +25,9 @@ const Product = () => {
 
     return (
         <div className="bg-base-200 max-h-screen">
-            <h1 className="text-center text-5xl font-bold py-6 text-[#00AEEF] ">Popular Product by {brand}</h1>
+            <ImageSlider></ImageSlider>
+            <h1 className="text-center text-5xl font-bold pt-6 text-[#00AEEF] ">Popular Product by {brand}</h1>
+            <h5 className="text-center text-lg text-[#ac52b4] font-medium pt-4 pb-6">Shop Your Desired Product from Featured {brand} </h5>
             {loading ? (
                 // <span className="loading loading-infinity loading-lg text-white "></span>
                 <div className="min-h-screen flex items-center justify-center">
@@ -36,7 +39,7 @@ const Product = () => {
                 </div>
 
             ) : (
-                <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 mx-6">
+                <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 p-6 bg-base-200">
                     {
                         loadedProducts.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                     }
