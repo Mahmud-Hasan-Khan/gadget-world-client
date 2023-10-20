@@ -3,18 +3,50 @@ import { useLoaderData } from "react-router-dom";
 import Brand from "./Brand";
 import TopSellingProducts from "./TopSellingProducts";
 import Payment from "./Payment";
+import { useState } from "react";
 
 const Home = () => {
-
     const allBrands = useLoaderData();
+
+    const [theme, setTheme] = useState('light');
+    const changeTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
+
     // console.log(allBrands);
 
     return (
-        <div className="bg-base-200">
+        <div className={`theme-${theme}`}>
+            <style>
+                {`
+      /* Light theme */
+      .theme-light {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      /* Dark theme */
+      .theme-dark {
+        background-color: #000000;
+        color: #ffffff;
+      }
+    `}
+            </style>
             <div className="mx-auto py-0 space-y-6">
                 <Helmet>
                     <title>Gadget World :: Home</title>
                 </Helmet>
+                <button
+                    className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
+                    onClick={changeTheme}
+                >
+                    {theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}
+                </button>
+
                 <div>
                     <img className="object-cover" src="https://i.ibb.co/QFkTLjB/banner-big.png" alt="" />
                 </div>
@@ -27,8 +59,8 @@ const Home = () => {
                         }
                     </div>
                 </div>
-                <TopSellingProducts></TopSellingProducts>
-                <Payment></Payment>
+                <TopSellingProducts theme={theme}></TopSellingProducts>
+                <Payment theme={theme}></Payment>
             </div>
         </div>
     );
