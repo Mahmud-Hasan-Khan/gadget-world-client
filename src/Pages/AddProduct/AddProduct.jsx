@@ -12,11 +12,11 @@ const AddProduct = () => {
         const brand = form.brand.value;
         const type = form.type.value;
         const price = parseFloat(form.price.value);
-        const description = form.description.value;
+        const short_description = form.description.value;
         const rating = parseFloat(form.rating.value);
         const image = form.image.value;
-        console.log(name, brand, type, price, description, rating, image);
-        const product = { name, brand, type, price, description, rating, image }
+        console.log(name, brand, type, price, short_description, rating, image);
+        const product = { name, brand, type, price, short_description, rating, image }
 
         // send data to server 
         fetch('http://localhost:3000/products', {
