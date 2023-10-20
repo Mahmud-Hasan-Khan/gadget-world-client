@@ -2,18 +2,23 @@ import { useLoaderData } from "react-router-dom";
 import StarRating from "../../components/StarRating";
 import Swal from "sweetalert2";
 import { AiOutlineShopping } from 'react-icons/ai';
+import { useContext } from "react";
+import { UserContext } from "../../Provider/AuthProviders";
 
 const ProductDetails = () => {
 
     const details = useLoaderData();
-    console.log(details);
+    const { loggedInUser } = useContext(UserContext);
+    const { email } = loggedInUser;
+
+    // console.log(details);
     const { name, brand, type, price, rating, image, short_description } = details;
 
     const handleAddToCart = () => {
-        const cart = { name, brand, type, price, image }
+        const cart = { email, name, brand, type, price, image }
 
         // send cart data to server
-        fetch('https://brandshop-server-rnzf3vrl1-mahmud-hasans-projects.vercel.app/carts', {
+        fetch('http://localhost:3000/carts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

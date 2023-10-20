@@ -1,12 +1,31 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { MdOutlineDeleteOutline } from "react-icons/md";
-import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { UserContext } from "../../Provider/AuthProviders";
 
 const MyCart = () => {
-    const loadedCarts = useLoaderData();
-    const [carts, setCarts] = useState(loadedCarts);
+    // const loadedCarts = useLoaderData();
+    const { loggedInUser } = useContext(UserContext);
+    const { email } = loggedInUser;
+    // console.log(email);
+    const [carts, setCarts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    // console.log(carts);
+
+    useEffect(() => {
+        setLoading(true);
+        fetch(`http://localhost:3000/carts?email=${email}`)
+            .then(res => res.json())
+            .then(data => {
+                setCarts(data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                setLoading(false);
+                console.error('Error fetch data', error);
+            })
+    }, [email])
 
     const handleDeleteCart = (id) => {
         // console.log(id);
@@ -23,7 +42,7 @@ const MyCart = () => {
 
                 console.log('delete conform');
                 // delete single api data from server
-                fetch(`https://brandshop-server-rnzf3vrl1-mahmud-hasans-projects.vercel.app/carts/${id} `,
+                fetch(`http://localhost:3000/carts/${id} `,
                     {
                         method: 'DELETE',
                     })

@@ -21,7 +21,7 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('https://brandshop-server-rnzf3vrl1-mahmud-hasans-projects.vercel.app/brands')
+                loader: () => fetch('http://localhost:3000/brands')
             },
             {
                 path: '/addProduct',
@@ -34,7 +34,8 @@ const myCreatedRouter = createBrowserRouter([
                 element: <PrivateRoute>
                     <MyCart></MyCart>
                 </PrivateRoute>,
-                loader: () => fetch('https://brandshop-server-rnzf3vrl1-mahmud-hasans-projects.vercel.app/carts')
+                // loader: () => fetch('http://localhost:3000/carts')
+                // loader: () => fetch(`http://localhost:3000/carts?email=${email}`)
             },
             {
                 path: '/products/:brand',
@@ -45,14 +46,14 @@ const myCreatedRouter = createBrowserRouter([
                 element: <PrivateRoute>
                     <ProductDetails></ProductDetails>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`https://brandshop-server-rnzf3vrl1-mahmud-hasans-projects.vercel.app/products/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`)
             },
             {
                 path: '/productUpdate/:id',
                 element: <PrivateRoute>
                     <UpdateProduct></UpdateProduct>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`https://brandshop-server-rnzf3vrl1-mahmud-hasans-projects.vercel.app/products/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`)
             },
             {
                 path: '/login',

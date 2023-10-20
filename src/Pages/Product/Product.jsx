@@ -11,7 +11,7 @@ const Product = () => {
     // get product data by bran from database 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://brandshop-server-rnzf3vrl1-mahmud-hasans-projects.vercel.app/products?brand=${brand}`)
+        fetch(`http://localhost:3000/products?brand=${brand}`)
             .then(res => res.json())
             .then(data => {
                 setLoadedProducts(data);
