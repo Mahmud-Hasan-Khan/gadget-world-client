@@ -58,7 +58,7 @@ const AddProduct = () => {
             }}>
                 <div className="bg-[#d1f2fd] px-4 lg:px-24 py-4 lg:py-6 m-4 lg:mx-28  shadow-2xl rounded-xl">
                     <h2 className="text-5xl font-extrabold text-center text-[#00AEEF] " style={{ textShadow: '4px 4px 6px rgba(0, 0, 0, 0.1)' }}>Add Product</h2>
-                    <p className='my-8  text-xl text-center'>It involves inputting essential details such as product name, description, price, and image into a database or system. This process ensures that the product is accurately represented and available for purchase, streamlining the customer's shopping experience.</p>
+                    <p className='my-8  text-xl text-center'>It involves inputting essential details such as product name, description, price, and image into a database or system. This process ensures that the product is accurately represented and available for purchase.</p>
                     <form onSubmit={handleAddProduct}>
 
                         {/* form Name and Brand Name row */}
