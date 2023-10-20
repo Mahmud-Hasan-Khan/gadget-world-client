@@ -11,7 +11,7 @@ const Product = () => {
     // get product data by bran from database 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:3000/products?brand=${brand}`)
+        fetch(`https://brandshop-server-4gads8yj4-mahmud-hasans-projects.vercel.app/products?brand=${brand}`)
             .then(res => res.json())
             .then(data => {
                 setLoadedProducts(data);
@@ -24,7 +24,7 @@ const Product = () => {
     }, [brand]);
 
     return (
-        <div className="bg-base-200 max-h-screen">
+        <div className="bg-base-200">
             <ImageSlider></ImageSlider>
             <h1 className="text-center text-5xl font-bold pt-6 text-[#00AEEF] ">Popular Product by {brand}</h1>
             <h5 className="text-center text-lg text-[#ac52b4] font-medium pt-4 pb-6">Shop Your Desired Product from Featured {brand} </h5>

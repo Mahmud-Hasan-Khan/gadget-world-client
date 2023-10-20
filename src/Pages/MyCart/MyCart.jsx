@@ -15,7 +15,7 @@ const MyCart = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:3000/carts?email=${email}`)
+        fetch(`https://brandshop-server-4gads8yj4-mahmud-hasans-projects.vercel.app/carts?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 setCarts(data);
@@ -42,7 +42,7 @@ const MyCart = () => {
 
                 console.log('delete conform');
                 // delete single api data from server
-                fetch(`http://localhost:3000/carts/${id} `,
+                fetch(`https://brandshop-server-4gads8yj4-mahmud-hasans-projects.vercel.app/carts/${id} `,
                     {
                         method: 'DELETE',
                     })

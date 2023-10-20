@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Brand from "./Brand";
+import TopSellingProducts from "./TopSellingProducts";
+import Payment from "./Payment";
 
 const Home = () => {
 
@@ -9,7 +11,7 @@ const Home = () => {
 
     return (
         <div className="bg-base-200">
-            <div className="mx-auto max-w-screen-xl py-4">
+            <div className="mx-auto max-w-screen-xl py-4 space-y-6">
                 <Helmet>
                     <title>Gadget World :: Home</title>
                 </Helmet>
@@ -19,6 +21,8 @@ const Home = () => {
                         allBrands.map(branData => <Brand key={branData._id} branData={branData} ></Brand>)
                     }
                 </div>
+                <TopSellingProducts></TopSellingProducts>
+                <Payment></Payment>
             </div>
         </div>
     );

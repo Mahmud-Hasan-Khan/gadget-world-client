@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@egjs/flicking-plugins": "^4.7.1",
+    "@egjs/react-flicking": "^4.11.0",
     "aos": "^2.3.4",
     "firebase": "^10.5.0",
     "framer-motion": "^10.16.4",
@@ -19,10 +21,13 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.11.0",
     "react-intersection-observer": "^9.5.2",
     "react-rating-stars-component": "^2.2.0",
+    "react-responsive": "^9.0.2",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.17.0",
     "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.29.0",

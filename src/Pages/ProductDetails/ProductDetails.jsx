@@ -18,7 +18,7 @@ const ProductDetails = () => {
         const cart = { email, name, brand, type, price, image }
 
         // send cart data to server
-        fetch('http://localhost:3000/carts', {
+        fetch('https://brandshop-server-4gads8yj4-mahmud-hasans-projects.vercel.app/carts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

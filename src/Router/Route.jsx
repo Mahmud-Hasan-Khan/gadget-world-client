@@ -10,7 +10,6 @@ import PrivateRoute from "./PrivateRoute";
 import Product from "../Pages/Product/Product";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
-// import GoogleProduct from "../Pages/GoogleProduct/GoogleProduct";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -21,7 +20,7 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:3000/brands')
+                loader: () => fetch('https://brandshop-server-4gads8yj4-mahmud-hasans-projects.vercel.app/brands')
             },
             {
                 path: '/addProduct',
@@ -44,14 +43,14 @@ const myCreatedRouter = createBrowserRouter([
                 element: <PrivateRoute>
                     <ProductDetails></ProductDetails>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://brandshop-server-4gads8yj4-mahmud-hasans-projects.vercel.app/products/${params.id}`)
             },
             {
                 path: '/productUpdate/:id',
                 element: <PrivateRoute>
                     <UpdateProduct></UpdateProduct>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://brandshop-server-4gads8yj4-mahmud-hasans-projects.vercel.app/products/${params.id}`)
             },
             {
                 path: '/login',
