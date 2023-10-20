@@ -37,8 +37,8 @@ const TopSellingProducts = () => {
 
   return (
     <div className="autoplay bg-white rounded">
-      <h1 className="text-center text-5xl font-bold pt-6 text-[#00AEEF] ">Top Selling Product</h1>
-      <h5 className="text-center text-lg text-[#ac52b4] font-medium pt-4 pb-6">Shop Your Desired Product from Featured </h5>
+      <h1 className="text-center text-4xl font-bold pt-6 text-[#00AEEF] ">Top Selling Product</h1>
+      <h5 className="text-center text-base text-[#ac52b4] font-medium pt-4 pb-6">Shop Your Desired Product from Featured </h5>
       <Slider {...settings} className="sm:slides-1 md:slides-2 lg:slides-3">
         {products.map((product, index) => (
           <div key={index} className='p-4'>

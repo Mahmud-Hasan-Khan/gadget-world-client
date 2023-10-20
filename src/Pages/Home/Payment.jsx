@@ -3,8 +3,8 @@ import Marquee from "react-fast-marquee";
 const Payment = () => {
     return (
         <div className="shadow-md bg-white rounded">
-            <h1 className="text-center text-5xl font-bold pt-6 text-[#00AEEF] ">Payment Methods</h1>
-            <h5 className="text-center text-lg text-[#ac52b4] font-medium pt-4 pb-6">You can pay now easy way</h5>
+            <h1 className="text-center text-4xl font-bold pt-6 text-[#00AEEF] ">Payment Methods</h1>
+            <h5 className="text-center text-base text-[#ac52b4] font-medium pt-4 pb-6">You can pay now easy way</h5>
             <div className="my-4">
                 <Marquee pauseOnHover>
                     <div className="bg-white mx-10">
