@@ -23,7 +23,7 @@ const MyCart = () => {
 
                 console.log('delete conform');
                 // delete single api data from server
-                fetch(`http://localhost:3000/carts/${id} `,
+                fetch(`https://brandshop-server-rnzf3vrl1-mahmud-hasans-projects.vercel.app/carts/${id} `,
                     {
                         method: 'DELETE',
                     })
