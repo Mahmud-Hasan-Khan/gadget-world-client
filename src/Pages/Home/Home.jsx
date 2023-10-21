@@ -1,9 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Brand from "./Brand";
-import TopSellingProducts from "./TopSellingProducts";
 import Payment from "./Payment";
-import { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
 import TopProducts from "../../components/TopProducts";
 
@@ -48,7 +46,6 @@ const Home = () => {
                         }
                     </div>
                     <TopProducts></TopProducts>
-                    {/* <TopSellingProducts ></TopSellingProducts> */}
                     <Payment></Payment>
                 </div>
             </div>
