@@ -8,17 +8,6 @@ import TopProducts from "../../components/TopProducts";
 const Home = () => {
     const allBrands = useLoaderData();
 
-    // const [theme, setTheme] = useState('light');
-    // const changeTheme = () => {
-    //     if (theme === 'light') {
-    //         setTheme('dark');
-    //     } else {
-    //         setTheme('light');
-    //     }
-    // }
-
-    // console.log(allBrands);
-
     return (
         <div >
             <Helmet>
@@ -26,14 +15,6 @@ const Home = () => {
             </Helmet>
 
             <div className="mx-auto py-0 space-y-2 relative">
-                <div className="absolute top-2 right-1">
-                    {/* <button
-                        className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
-                        onClick={changeTheme}
-                    >
-                        {theme === 'light' ? 'Dark Theme' : 'Light Theme'}
-                    </button> */}
-                </div>
 
                 <div className="max-w-full mx-auto">
                     <img className="object-cover w-full" src="https://i.ibb.co/QFkTLjB/banner-big.png" alt="" />
