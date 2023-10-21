@@ -39,7 +39,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar shadow-md">
+        <div className="navbar shadow-xl fixed z-10 bg-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="lg:hidden">
@@ -54,13 +54,13 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:block">
                 <ul className="menu menu-horizontal space-x-2 font-bold text-[#00AEEF]">
                     <li>
-                        <NavLink to='/' className={({ isActive }) => (isActive ? 'border-b-2 rounded-full shadow-md border-[#00AEEF] text-[#00AEEF] hover:bg-[#00AEEF] hover:text-white' : '')}>Home</NavLink>
+                        <NavLink to='/' className={({ isActive }) => (isActive ? 'border-b-2 rounded-full shadow-md border-[#00AEEF] text-base text-[#00AEEF] hover:bg-[#00AEEF] hover:text-white' : 'text-base')}>Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/addProduct" className={({ isActive }) => (isActive ? 'border-b-2 border-[#00AEEF] text-[#00AEEF] hover:bg-[#00AEEF] hover:text-white' : '')}>Add Product</NavLink>
+                        <NavLink to="/addProduct" className={({ isActive }) => (isActive ? 'border-b-2 border-[#00AEEF] text-base text-[#00AEEF] hover:bg-[#00AEEF] hover:text-white' : 'text-base')}>Add Product</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/myCart" className={({ isActive }) => (isActive ? 'border-b-2 border-[#00AEEF] text-[#00AEEF] hover:bg-[#00AEEF] hover:text-white' : '')}>My Cart</NavLink>
+                        <NavLink to="/myCart" className={({ isActive }) => (isActive ? 'border-b-2 border-[#00AEEF] text-base text-[#00AEEF] hover:bg-[#00AEEF] hover:text-white' : 'text-base')}>My Cart</NavLink>
                     </li>
                 </ul>
             </div>

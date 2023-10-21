@@ -4,65 +4,51 @@ import Brand from "./Brand";
 import TopSellingProducts from "./TopSellingProducts";
 import Payment from "./Payment";
 import { useState } from "react";
+import SectionTitle from "../../components/SectionTitle";
 
 const Home = () => {
     const allBrands = useLoaderData();
 
-    const [theme, setTheme] = useState('light');
-    const changeTheme = () => {
-        if (theme === 'light') {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
-    }
+    // const [theme, setTheme] = useState('light');
+    // const changeTheme = () => {
+    //     if (theme === 'light') {
+    //         setTheme('dark');
+    //     } else {
+    //         setTheme('light');
+    //     }
+    // }
 
     // console.log(allBrands);
 
     return (
-        <div className={`theme-${theme}`}>
-            <style>
-                {`
-      /* Light theme */
-      .theme-light {
-        background-color: #ffffff;
-        color: #000000;
-      }
+        <div >
+            <Helmet>
+                <title>Gadget World :: Home</title>
+            </Helmet>
 
-      /* Dark theme */
-      .theme-dark {
-        background-color: #000000;
-        color: #ffffff;
-      }
-    `}
-            </style>
-            <div className="mx-auto py-0 space-y-6 relative">
-                <Helmet>
-                    <title>Gadget World :: Home</title>
-                </Helmet>
+            <div className="mx-auto py-0 space-y-2 relative">
                 <div className="absolute top-2 right-1">
-                    <button
+                    {/* <button
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
                         onClick={changeTheme}
                     >
                         {theme === 'light' ? 'Dark Theme' : 'Light Theme'}
-                    </button>
+                    </button> */}
                 </div>
 
-                <div>
-                    <img className="object-cover" src="https://i.ibb.co/QFkTLjB/banner-big.png" alt="" />
+                <div className="max-w-full mx-auto">
+                    <img className="object-cover w-full" src="https://i.ibb.co/QFkTLjB/banner-big.png" alt="" />
                 </div>
-                <div>
-                    <h1 className="text-center text-4xl font-bold pt-6 text-[#00AEEF] ">World Famous Brand</h1>
-                    <h5 className="text-center text-base text-[#ac52b4] font-medium pt-4 pb-6">Shop Your Desired Product from Brand </h5>
-                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 place-items-center mx-auto">
+                <div className="max-w-7xl mx-auto">
+                    <SectionTitle subheading={"Shop Your Desired Product from Brand"} heading={"World Famous Brand"} ></SectionTitle>
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 place-items-center mx-auto shadow-xl rounded-lg py-6 mb-6 border border-[#a0d3e7]">
                         {
                             allBrands.map(branData => <Brand key={branData._id} branData={branData} ></Brand>)
                         }
                     </div>
+                    <TopSellingProducts ></TopSellingProducts>
+                    <Payment></Payment>
                 </div>
-                <TopSellingProducts theme={theme}></TopSellingProducts>
-                <Payment theme={theme}></Payment>
             </div>
         </div>
     );

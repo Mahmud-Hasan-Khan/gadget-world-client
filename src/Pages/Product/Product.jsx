@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../ProductCard/ProductCard";
 import ImageSlider from "../../components/ImageSlider";
+import SectionTitle from "../../components/SectionTitle";
 
 const Product = () => {
     const [loadedProducts, setLoadedProducts] = useState([]);
@@ -24,28 +25,29 @@ const Product = () => {
     }, [brand]);
 
     return (
-        <div className="bg-base-200">
+        <div className="bg-base-200 lg:mt-10">
             <ImageSlider></ImageSlider>
-            <h1 className="text-center text-5xl font-bold pt-6 text-[#00AEEF] ">Popular Product by {brand}</h1>
-            <h5 className="text-center text-lg text-[#ac52b4] font-medium pt-4 pb-6">Shop Your Desired Product from Featured {brand} </h5>
-            {loading ? (
-                // <span className="loading loading-infinity loading-lg text-white "></span>
-                <div className="min-h-screen flex items-center justify-center">
-                    <span className="loading loading-infinity loading-lg text-[#00AEEF]"></span>
-                </div>
-            ) : loadedProducts.length === 0 ? (
-                <div className="flex items-center justify-center my-auto py-40">
-                    <h1 className="text-[#ad5cb4] text-4xl font-medium">{brand} Product Will Be Available Soon...</h1>
-                </div>
+            <SectionTitle heading={`Popular Product by ` + brand} subheading={`Shop Your Desired Product from Featured ` + brand}></SectionTitle>
+            {
+                loading ? (
 
-            ) : (
-                <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 p-6 bg-base-200">
-                    {
-                        loadedProducts.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
-                    }
-                </div>
-            )}
-        </div>
+                    <div className="min-h-screen flex items-center justify-center">
+                        <span className="loading loading-infinity loading-lg text-[#00AEEF]"></span>
+                    </div>
+                ) : loadedProducts.length === 0 ? (
+                    <div className="flex items-center justify-center my-auto py-40">
+                        <h1 className="text-[#ad5cb4] text-4xl font-medium">{brand} Product Will Be Available Soon...</h1>
+                    </div>
+
+                ) : (
+                    <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 p-6 bg-base-200">
+                        {
+                            loadedProducts.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
+                        }
+                    </div>
+                )
+            }
+        </div >
     );
 };
 

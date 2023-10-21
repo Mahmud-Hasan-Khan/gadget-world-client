@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import Swal from "sweetalert2";
 import { UserContext } from "../../Provider/AuthProviders";
+import SectionTitle from "../../components/SectionTitle";
 
 const MyCart = () => {
     // const loadedCarts = useLoaderData();
@@ -67,12 +68,11 @@ const MyCart = () => {
     let serial = 1;
 
     return (
-        <div>
+        <div className="lg:mt-14">
             <Helmet>
                 <title>Gadget World :: MyCart</title>
             </Helmet>
-            <h1 className="text-center text-5xl font-bold pt-6 text-[#00AEEF] ">Your added products</h1>
-            <h5 className="text-center text-lg text-[#ac52b4] font-medium pt-4 pb-6">Shop Your Desired Product from Here</h5>
+            <SectionTitle heading={"Your Added Products"} subheading={"Shop Your Desired Product from Here"}></SectionTitle>
             <div className="max-w-5xl mx-auto">
                 <h4 className="text-center text-lg text-[#ac52b4] font-medium">Total Product {carts.length}</h4>
                 <div className="overflow-x-auto">

@@ -60,6 +60,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import SectionTitle from '../../components/SectionTitle';
 
 const products = [
   {
@@ -94,9 +95,9 @@ const TopSellingProducts = ({ theme }) => {
   };
 
   return (
-    <div className={`autoplay bg-white rounded theme-${theme}`}>
-      <h1 className={`text-center text-4xl font-bold pt-6 text-${theme === 'dark' ? 'white' : '#00AEEF'}`}>Top Selling Product</h1>
-      <h5 className={`text-center text-base text-${theme === 'dark' ? 'gray-400' : '#ac52b4'} font-medium pt-4 pb-6`}>Shop Your Desired Product from Featured</h5>
+    <div className={`autoplay shadow-xl border border-[#a0d3e7] rounded-lg py-6 mb-6 theme-${theme}`}>
+      <SectionTitle heading={"Top Selling Product"} subheading={"Shop Your Desired Product from Featured"} ></SectionTitle>
+
       <Slider {...settings} className="sm:slides-1 md:slides-2 lg:slides-3">
         {products.map((product, index) => (
           <div key={index} className='p-4'>
