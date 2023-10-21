@@ -73,7 +73,7 @@ const TopProducts = () => {
     };
 
     return (
-        <div className='shadow-xl border rounded-lg py-6 mb-6' onMouseEnter={onSwiperMouseEnter} onMouseLeave={onSwiperMouseLeave}>
+        <div className='shadow-xl border rounded-lg py-6 mb-6'>
             <SectionTitle heading={"Top Selling Product"} subheading={"Shop Your Desired Product from Featured"} />
             <Swiper
                 slidesPerView={1}
@@ -105,7 +105,7 @@ const TopProducts = () => {
             >
                 {products.map((product, index) => (
                     <SwiperSlide key={index}>
-                        <div className='flex items-center justify-center'>
+                        <div className='flex items-center justify-center' onMouseEnter={onSwiperMouseEnter} onMouseLeave={onSwiperMouseLeave}>
                             <div className="card card-compact w-60 bg-base-100 shadow-xl border border-[#a0d3e7]">
                                 <figure><img src={product.image} alt="Product" /></figure>
                                 <div className="card-body text-center">
