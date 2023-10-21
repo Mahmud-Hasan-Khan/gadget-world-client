@@ -5,6 +5,7 @@ import TopSellingProducts from "./TopSellingProducts";
 import Payment from "./Payment";
 import { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
+import TopProducts from "../../components/TopProducts";
 
 const Home = () => {
     const allBrands = useLoaderData();
@@ -41,12 +42,13 @@ const Home = () => {
                 </div>
                 <div className="max-w-7xl mx-auto">
                     <SectionTitle subheading={"Shop Your Desired Product from Brand"} heading={"World Famous Brand"} ></SectionTitle>
-                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 place-items-center mx-auto shadow-xl rounded-lg py-6 mb-6 border border-[#a0d3e7]">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 place-items-center mx-auto shadow-xl rounded-lg py-6 mb-6 border">
                         {
                             allBrands.map(branData => <Brand key={branData._id} branData={branData} ></Brand>)
                         }
                     </div>
-                    <TopSellingProducts ></TopSellingProducts>
+                    <TopProducts></TopProducts>
+                    {/* <TopSellingProducts ></TopSellingProducts> */}
                     <Payment></Payment>
                 </div>
             </div>
