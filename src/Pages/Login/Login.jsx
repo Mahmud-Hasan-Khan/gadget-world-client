@@ -87,7 +87,7 @@ const Login = () => {
     })
     return (
 
-        <div className='py-4 bg-[#00AEEF]'>
+        <div className='lg:mt-10 py-4 bg-[#00AEEF]'>
             <Helmet>
                 <title>Gadget World :: Login</title>
             </Helmet>

@@ -110,7 +110,7 @@ const Register = () => {
                 <title>Gadget World :: Register</title>
             </Helmet>
 
-            <div className="hero my-2" data-aos="fade-up">
+            <div className="hero my-2 lg:mt-10" data-aos="fade-up">
                 <div className="px-24 py-4 max-w-[752px] shadow-2xl bg-transparent backdrop-blur-sm rounded-lg">
                     <h1 className="text-4xl font-semibold text-center text-white">Register your account</h1>
                     <div className="divider pt-1"></div>
