@@ -64,4 +64,4 @@
 
 ## Screenshots
 
-![App Screenshot](https://i.ibb.co/0sHCmnn/screencapture-gadget-world.png)
+![App Screenshot](https://i.ibb.co/jZbHKSS/screencapture-localhost.png)
