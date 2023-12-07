@@ -60,7 +60,7 @@
 - Clicking on the `Update button` user cad update existing product. It's also `Protected Route` 
 
 ## Live Site Link
-- [Click Here to Open Live Site](https://gadget-world-b1b2a.web.app/)
+- [Click Here to Open Live Site](https://unrivaled-queijadas-db47e3.netlify.app/)
 
 ## Screenshots
 
